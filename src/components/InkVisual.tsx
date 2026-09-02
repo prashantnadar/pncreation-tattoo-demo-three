@@ -11,7 +11,7 @@ export function InkVisual() {
     >
       <motion.div
         className="absolute inset-[8%] rounded-full border border-accent/50"
-        animate={reduce ? undefined : { rotate: 360 }}
+        animate={reduce ? {} : { rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
         <span className="absolute top-0 left-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 bg-accent" />
@@ -19,7 +19,7 @@ export function InkVisual() {
 
       <motion.div
         className="absolute inset-[20%] rounded-full border border-foreground/25 diag-stripes"
-        animate={reduce ? undefined : { rotate: -360 }}
+        animate={reduce ? {} : { rotate: -360 }}
         transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
       />
 
