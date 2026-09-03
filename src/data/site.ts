@@ -217,20 +217,132 @@ export const testimonials = [
   },
 ] as const;
 
+import serpentSpine from "../assets/gallery/serpent-spine.jpg";
+import hairlineScript from "../assets/gallery/hairline-script.jpg";
+import griefPortrait from "../assets/gallery/grief-portrait.jpg";
+import septumCurve from "../assets/gallery/septum-curve.jpg";
+import ornamentalBand from "../assets/gallery/ornamental-band.jpg";
+import wireBotanicals from "../assets/gallery/wire-botanicals.jpg";
+import solidPanel from "../assets/gallery/solid-panel.jpg";
+import chromeStudy from "../assets/gallery/chrome-study.jpg";
+import curatedLobe from "../assets/gallery/curated-lobe.jpg";
+import customCompass from "../assets/gallery/custom-compass.jpg";
+import threadLines from "../assets/gallery/thread-lines.jpg";
+import inkWashWolf from "../assets/gallery/ink-wash-wolf.jpg";
+import studioInterior from "../assets/studio-interior.jpg";
+
+export const studioImage = studioInterior;
+
 export const galleryItems = [
-  { title: "Serpent Spine", category: "Blackwork", span: "tall" },
-  { title: "Hairline Script", category: "Fine Line", span: "short" },
-  { title: "Grief Portrait", category: "Realism", span: "tall" },
-  { title: "Septum Curve", category: "Piercing", span: "short" },
-  { title: "Ornamental Band", category: "Tattoo", span: "mid" },
-  { title: "Wire Botanicals", category: "Fine Line", span: "mid" },
-  { title: "Solid Panel", category: "Blackwork", span: "short" },
-  { title: "Chrome Study", category: "Realism", span: "tall" },
-  { title: "Curated Lobe", category: "Piercing", span: "mid" },
-  { title: "Custom Compass", category: "Tattoo", span: "short" },
-  { title: "Thread Lines", category: "Fine Line", span: "tall" },
-  { title: "Ink Wash Wolf", category: "Realism", span: "mid" },
+  {
+    title: "Serpent Spine",
+    category: "Blackwork",
+    span: "tall",
+    src: serpentSpine,
+    alt: "Blackwork serpent tattoo running down a client's spine",
+  },
+  {
+    title: "Hairline Script",
+    category: "Fine Line",
+    span: "short",
+    src: hairlineScript,
+    alt: "Fine line botanical branch tattoo on a forearm",
+  },
+  {
+    title: "Grief Portrait",
+    category: "Realism",
+    span: "tall",
+    src: griefPortrait,
+    alt: "Black and grey realism portrait tattoo on a forearm",
+  },
+  {
+    title: "Septum Curve",
+    category: "Piercing",
+    span: "short",
+    src: septumCurve,
+    alt: "Close-up of a polished septum piercing ring",
+  },
+  {
+    title: "Ornamental Band",
+    category: "Tattoo",
+    span: "mid",
+    src: ornamentalBand,
+    alt: "Ornamental geometric band tattoo wrapping an upper arm",
+  },
+  {
+    title: "Wire Botanicals",
+    category: "Fine Line",
+    span: "mid",
+    src: wireBotanicals,
+    alt: "Delicate fine line wildflower tattoo on a forearm",
+  },
+  {
+    title: "Solid Panel",
+    category: "Blackwork",
+    span: "short",
+    src: solidPanel,
+    alt: "Solid blackwork shoulder panel tattoo with negative space shapes",
+  },
+  {
+    title: "Chrome Study",
+    category: "Realism",
+    span: "tall",
+    src: chromeStudy,
+    alt: "Realistic chrome sphere tattoo on a forearm",
+  },
+  {
+    title: "Curated Lobe",
+    category: "Piercing",
+    span: "mid",
+    src: curatedLobe,
+    alt: "Curated ear with multiple lobe and helix piercings",
+  },
+  {
+    title: "Custom Compass",
+    category: "Tattoo",
+    span: "short",
+    src: customCompass,
+    alt: "Custom compass tattoo in black ink on a forearm",
+  },
+  {
+    title: "Thread Lines",
+    category: "Fine Line",
+    span: "tall",
+    src: threadLines,
+    alt: "Minimal single needle line tattoo along an inner arm",
+  },
+  {
+    title: "Ink Wash Wolf",
+    category: "Realism",
+    span: "mid",
+    src: inkWashWolf,
+    alt: "Black and grey ink wash wolf tattoo on a shoulder",
+  },
 ] as const;
+
+export const featuredWork = [
+  {
+    label: "Tattoo",
+    src: ornamentalBand,
+    alt: "Ornamental band tattoo wrapping an upper arm",
+  },
+  {
+    label: "Fine Line",
+    src: wireBotanicals,
+    alt: "Fine line wildflower tattoo on a forearm",
+  },
+  {
+    label: "Blackwork",
+    src: serpentSpine,
+    alt: "Blackwork serpent tattoo along a spine",
+  },
+  {
+    label: "Piercing",
+    src: curatedLobe,
+    alt: "Curated ear piercings with gold and titanium jewellery",
+  },
+] as const;
+
 
 export const galleryFilters = [
   "All",
