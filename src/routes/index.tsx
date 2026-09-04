@@ -6,6 +6,7 @@ import { MapBlock } from "../components/MapBlock";
 import { Reveal } from "../components/Reveal";
 import { ArrowIcon, ClockIcon, MailIcon, PhoneIcon, PinIcon } from "../components/Icons";
 import {
+  featuredWork,
   homeServices,
   mailHref,
   processSteps,
@@ -15,6 +16,7 @@ import {
   testimonials,
   whatsappHref,
 } from "../data/site";
+
 
 const title = `Tattoo Studio in ${site.city} | Custom Tattoos & Piercing — ${site.legalName}`;
 const description = `${site.legalName} is a custom tattoo and piercing studio in ${site.city}. Fine line, blackwork, realism, cover ups and sterile professional piercing. Book a consultation.`;
@@ -217,16 +219,24 @@ function Home() {
             </BtnLink>
           </div>
           <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-            {["Tattoo", "Fine Line", "Blackwork", "Piercing"].map((cat, i) => (
-              <Reveal key={cat} delay={i * 0.05} className="bg-background">
-                {/* Swap this block for an <img> when real photography is ready. */}
-                <div className="diag-stripes flex aspect-[4/5] items-end p-5 transition-colors hover:bg-surface">
-                  <h3 className="font-display text-[clamp(1.5rem,4vw,2.25rem)] leading-none">
-                    {cat}
-                  </h3>
+            {featuredWork.map((item, i) => (
+              <Reveal key={item.label} delay={i * 0.05} className="bg-background">
+                <div className="group relative aspect-[4/5] overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/80 to-transparent p-5">
+                    <h3 className="font-display text-[clamp(1.5rem,4vw,2.25rem)] leading-none text-white">
+                      {item.label}
+                    </h3>
+                  </div>
                 </div>
               </Reveal>
             ))}
+
           </div>
         </div>
       </section>

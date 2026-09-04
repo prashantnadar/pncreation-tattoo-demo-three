@@ -50,9 +50,9 @@ function Gallery() {
           </h1>
           <p className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg">
             A selection of recent work from the {site.city} studio, grouped by
-            style. Photography is being reshot — each block below is a placeholder
-            for a real piece.
+            style.
           </p>
+
         </div>
       </section>
 
@@ -91,17 +91,25 @@ function Gallery() {
                 transition={{ duration: 0.3 }}
                 className="mb-4 break-inside-avoid"
               >
-                {/* Replace this block with an <img> when real photography is ready. */}
                 <div
-                  className={`diag-stripes flex flex-col justify-between border border-border p-5 transition-colors hover:bg-surface ${heights[item.span]}`}
+                  className={`group relative overflow-hidden border border-border ${heights[item.span]}`}
                 >
-                  <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-accent">
-                    {item.category}
-                  </p>
-                  <h2 className="font-display text-[clamp(1.5rem,3.5vw,2.25rem)] leading-none">
-                    {item.title}
-                  </h2>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-black/80 via-black/10 to-transparent p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-accent">
+                      {item.category}
+                    </p>
+                    <h2 className="font-display text-[clamp(1.5rem,3.5vw,2.25rem)] leading-none text-white">
+                      {item.title}
+                    </h2>
+                  </div>
                 </div>
+
               </motion.article>
             ))}
           </AnimatePresence>
