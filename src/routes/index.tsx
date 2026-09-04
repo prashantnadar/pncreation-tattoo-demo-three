@@ -220,7 +220,7 @@ function Home() {
           </div>
           <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
             {featuredWork.map((item, i) => (
-              <Reveal key={item.category} delay={i * 0.05} className="bg-background">
+              <Reveal key={item.label} delay={i * 0.05} className="bg-background">
                 <div className="group relative aspect-[4/5] overflow-hidden">
                   <img
                     src={item.src}
