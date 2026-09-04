@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BtnLink } from "../components/Btn";
 import { Reveal } from "../components/Reveal";
-import { site } from "../data/site";
+import { site, studioImage } from "../data/site";
 
 const title = `About Raw Ink — Tattoo Artists in ${site.city}`;
 const description = `Meet the artists behind ${site.legalName}, a custom tattoo and piercing studio in ${site.city}. Our story, philosophy, hygiene standards and aftercare approach.`;
@@ -89,7 +89,16 @@ function About() {
       </section>
 
       <section className={`${wrap} py-16 lg:py-24`}>
+        <Reveal>
+          <img
+            src={studioImage}
+            alt={`Interior of the ${site.legalName} tattoo studio in ${site.city}`}
+            loading="lazy"
+            className="mb-16 h-[clamp(18rem,45vw,34rem)] w-full border border-border object-cover"
+          />
+        </Reveal>
         <div className="grid gap-px border border-border bg-border md:grid-cols-2">
+
           {blocks.map((b, i) => (
             <Reveal key={b.n} delay={i * 0.05} className="bg-background">
               <article className="h-full p-6 sm:p-10">

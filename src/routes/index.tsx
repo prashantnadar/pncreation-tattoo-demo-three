@@ -230,7 +230,7 @@ function Home() {
                   />
                   <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/80 to-transparent p-5">
                     <h3 className="font-display text-[clamp(1.5rem,4vw,2.25rem)] leading-none text-white">
-                      {item.category}
+                      {item.label}
                     </h3>
                   </div>
                 </div>
